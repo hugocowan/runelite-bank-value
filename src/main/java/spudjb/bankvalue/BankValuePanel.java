@@ -254,7 +254,7 @@ class BankValuePanel extends PluginPanel
 
 		exportPanel.setBorder(BorderFactory.createEmptyBorder(5, 1, 5, 1));
 		exportToClipboardButton.setText("Copy Bank Data to clipboard");
-		exportToClipboardButton.setToolTipText("Export bank as CSV data, copied to your clipboard. Configure in settings");
+		exportToClipboardButton.setToolTipText("Export your bank data, copied to your clipboard. Configure in settings");
 		exportToClipboardButton.addMouseListener(new MouseAdapter()
 		{
 			@Override
