@@ -155,7 +155,7 @@ class BankValuePanel extends PluginPanel
 			result = new JsonArray();
 
 			for (CachedItem item : plugin.cachedItems) {
-				if (config.hideUnderValue() > item.getValue()) {
+				if (config.hideUnderValue() > (item.getValue() * item.getQuantity())) {
 					continue;
 				}
 				((JsonArray) result).add(createJsonObject(item.getName(), item.getId(), item.getQuantity(), item.getValue() * item.getQuantity()));
@@ -168,7 +168,7 @@ class BankValuePanel extends PluginPanel
 			}
 
 			for (CachedItem item : plugin.cachedItems) {
-				if (config.hideUnderValue() > item.getValue()) {
+				if (config.hideUnderValue() > (item.getValue() * item.getQuantity())) {
 					continue;
 				}
 				((StringBuilder) result).append(addCSVLine(item.getName(), item.getId(), item.getQuantity(), item.getValue() * item.getQuantity()));
